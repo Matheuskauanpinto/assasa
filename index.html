@@ -15,15 +15,15 @@
 <body>
 
   <h1>Saldo:</h1>
-  <p id="saldo">2</p>
+  <p id="saldo">-2</p>
 
   <script>
-    // Função para aumentar o saldo multiplicando pelo número
+    // Função para diminuir o saldo multiplicando pelo número
     function atualizarSaldo() {
       var saldoElemento = document.getElementById('saldo');
       var saldoAtual = parseFloat(saldoElemento.textContent);
       var novoSaldo = saldoAtual * 4;
-      saldoElemento.textContent = novoSaldo.toFixed(-2);
+      saldoElemento.textContent = novoSaldo.toFixed(2);
     }
 
     // Atualiza o saldo a cada segundo
