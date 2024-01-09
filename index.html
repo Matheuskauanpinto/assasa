@@ -15,19 +15,19 @@
 <body>
 
   <h1>Saldo:</h1>
-  <p id="saldo">0</p>
+  <p id="saldo">2</p>
 
   <script>
-    // Função para aumentar exponencialmente o saldo
+    // Função para aumentar o saldo multiplicando pelo número
     function atualizarSaldo() {
       var saldoElemento = document.getElementById('saldo');
       var saldoAtual = parseFloat(saldoElemento.textContent);
-      var novoSaldo = saldoAtual - Math.pow(50, saldoAtual);
-      saldoElemento.textContent = novoSaldo.toFixed(99);
+      var novoSaldo = saldoAtual * 4;
+      saldoElemento.textContent = novoSaldo.toFixed(2);
     }
 
     // Atualiza o saldo a cada segundo
-    setInterval(atualizarSaldo, 10);
+    setInterval(atualizarSaldo, 1000);
   </script>
 
 </body>
