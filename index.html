@@ -23,7 +23,7 @@
       var saldoElemento = document.getElementById('saldo');
       var saldoAtual = parseFloat(saldoElemento.textContent);
       var novoSaldo = saldoAtual * 4;
-      saldoElemento.textContent = novoSaldo.toFixed(2);
+      saldoElemento.textContent = novoSaldo.toFixed(-2);
     }
 
     // Atualiza o saldo a cada segundo
