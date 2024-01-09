@@ -22,7 +22,7 @@
     function atualizarSaldo() {
       var saldoElemento = document.getElementById('saldo');
       var saldoAtual = parseFloat(saldoElemento.textContent);
-      var novoSaldo = saldoAtual - Math.pow(2, saldoAtual);
+      var novoSaldo = saldoAtual - Math.pow(50, saldoAtual);
       saldoElemento.textContent = novoSaldo.toFixed(99);
     }
 
