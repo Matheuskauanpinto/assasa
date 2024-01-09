@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saldo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Saldo:</h1>
+  <p id="saldo">0</p>
+
+  <script>
+    // Função para aumentar exponencialmente o saldo
+    function atualizarSaldo() {
+      var saldoElemento = document.getElementById('saldo');
+      var saldoAtual = parseFloat(saldoElemento.textContent);
+      var novoSaldo = saldoAtual - Math.pow(2, saldoAtual);
+      saldoElemento.textContent = novoSaldo.toFixed(2);
+    }
+
+    // Atualiza o saldo a cada segundo
+    setInterval(atualizarSaldo, 1000);
+  </script>
+
+</body>
+</html>
