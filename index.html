@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 250px;
     }
   </style>
 </head>
@@ -26,14 +26,18 @@
 
       // Simula uma carga mais pesada
       for (var i = 0; i < 100000; i++) {
-        Math.sqrt(i);
+        // Cria um array grande e realiza operações
+        var array = new Array(10000);
+        for (var j = 0; j < array.length; j++) {
+          array[j] = Math.sin(Math.random() * Math.random());
+        }
       }
 
       numeroElemento.textContent = novoNumero;
     }
 
     // Aumenta o número a cada 100 milissegundos
-    setInterval(aumentarNumero, 1);
+    setInterval(aumentarNumero, 100);
   </script>
 
 </body>
