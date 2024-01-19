@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saldo</title>
+  <title>Teste de Desempenho</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,20 +14,20 @@
 </head>
 <body>
 
-  <h1>Saldo de fotos:</h1>
-  <p id="saldo">-2</p>
+  <h1>Teste de Desempenho:</h1>
+  <p id="numero">0</p>
 
   <script>
-    // Função para diminuir o saldo multiplicando pelo número
-    function atualizarSaldo() {
-      var saldoElemento = document.getElementById('saldo');
-      var saldoAtual = parseFloat(saldoElemento.textContent);
-      var novoSaldo = saldoAtual * 4;
-      saldoElemento.textContent = novoSaldo.toFixed(2);
+    // Função para aumentar o número indefinidamente
+    function aumentarNumero() {
+      var numeroElemento = document.getElementById('numero');
+      var numeroAtual = parseInt(numeroElemento.textContent);
+      var novoNumero = numeroAtual + 1;
+      numeroElemento.textContent = novoNumero;
     }
 
-    // Atualiza o saldo a cada segundo
-    setInterval(atualizarSaldo, 1000);
+    // Aumenta o número a cada 100 milissegundos
+    setInterval(aumentarNumero, 100);
   </script>
 
 </body>
