@@ -23,6 +23,12 @@
       var numeroElemento = document.getElementById('numero');
       var numeroAtual = parseInt(numeroElemento.textContent);
       var novoNumero = numeroAtual + 1;
+
+      // Simula uma carga mais pesada
+      for (var i = 0; i < 100000; i++) {
+        Math.sqrt(i);
+      }
+
       numeroElemento.textContent = novoNumero;
     }
 
