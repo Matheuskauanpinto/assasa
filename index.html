@@ -1,44 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste de Desempenho</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 250px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope de Amor</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <h1>Teste de Desempenho:</h1>
-  <p id="numero">0</p>
-
-  <script>
-    // Função para aumentar o número indefinidamente
-    function aumentarNumero() {
-      var numeroElemento = document.getElementById('numero');
-      var numeroAtual = parseInt(numeroElemento.textContent);
-      var novoNumero = numeroAtual + 1;
-
-      // Simula uma carga mais pesada
-      for (var i = 0; i < 100000; i++) {
-        // Cria um array grande e realiza operações
-        var array = new Array(10000);
-        for (var j = 0; j < array.length; j++) {
-          array[j] = Math.sin(Math.random() * Math.random());
-        }
-      }
-
-      numeroElemento.textContent = novoNumero;
-    }
-
-    // Aumenta o número a cada 100 milissegundos
-    setInterval(aumentarNumero, 100);
-  </script>
-
+    <div class="container">
+        <div class="envelope">
+            <button class="open-button" onclick="openEnvelope()">Abrir</button>
+            <div class="hearts hidden"></div>
+            <p class="message hidden">Eu te amo!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
