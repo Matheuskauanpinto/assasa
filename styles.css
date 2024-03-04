@@ -118,3 +118,42 @@
     transition-delay: 0.4s;
   }
   
+  /* Added styles for the flowers */
+  body {
+    overflow: hidden; /* Prevents scrollbars */
+  }
+  
+  div {
+    position: absolute;
+    background-color: #FFD700; /* Yellow */
+    border-radius: 50%;
+    animation: fadeInOut 2s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5)); /* Adds shadow effect */
+  }
+  
+  div:before {
+    content: "";
+    position: absolute;
+    background-color: #FFD700; /* Yellow */
+    border-radius: 50%;
+    animation: move 2s linear infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    20%, 80% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0) rotate(0deg);
+    }
+    100% {
+      transform: translate(300px) rotate(360deg);
+    }
+  }
+  

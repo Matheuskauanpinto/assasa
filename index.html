@@ -21,17 +21,39 @@
                     </div>
                 </div>
             </div>
-            <div class="heart" onclick="openEnvelope()"></div>
+            <div class="heart hidden"></div>
         </div>
     </div>
     <script>
-        function openEnvelope() {
-            const envelope = document.getElementById('envelope');
-            const heart = document.querySelector('.heart');
+        const heart = document.querySelector('.heart');
+        const envelope = document.querySelector('.envelope-wrapper');
 
+        heart.addEventListener('click', (e) => {
+            e.stopPropagation();
             envelope.classList.toggle('flap');
             heart.classList.toggle('hidden');
-        }
+        });
+    </script>
+    <script>
+        document.addEventListener("mousemove", function (e) {
+            let body = document.querySelector("body");
+            let flower = document.createElement("div");
+            let x = e.offsetX;
+            let y = e.offsetY;
+            flower.style.left = x + "px";
+            flower.style.top = y + "px";
+            body.appendChild(flower);
+            setTimeout(function () {
+                flower.remove();
+            }, 2000);
+
+            let size = Math.random() * 80;
+            flower.style.width = 20 + size + "px";
+            flower.style.height = 20 + size + "px";
+
+            let rotation = Math.random() * 360;
+            flower.style.transform = `rotate(${rotation}deg)`;
+        });
     </script>
 </body>
 </html>
