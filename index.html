@@ -21,18 +21,17 @@
                     </div>
                 </div>
             </div>
-            <div class="heart hidden"></div>
+            <div class="heart" onclick="openEnvelope()"></div>
         </div>
     </div>
     <script>
-        const heart = document.querySelector('.heart');
-        const envelope = document.querySelector('.envelope-wrapper');
+        function openEnvelope() {
+            const envelope = document.getElementById('envelope');
+            const heart = document.querySelector('.heart');
 
-        heart.addEventListener('click', (e) => {
-            e.stopPropagation();
             envelope.classList.toggle('flap');
             heart.classList.toggle('hidden');
-        });
+        }
     </script>
 </body>
 </html>
