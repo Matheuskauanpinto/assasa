@@ -10,10 +10,10 @@
 <body>
     <div class="container">
         <div class="envelope-wrapper">
-            <div class="envelope">
+            <div class="envelope" id="envelope">
                 <div class="letter">
                     <div class="text">
-                        <strong>Dear Person.</strong>
+                        <strong>Querida pessoa,</strong>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Numquam labore omnis minus maiores laboriosam, facere in beatae esse. 
@@ -25,9 +25,13 @@
         </div>
     </div>
     <script>
+        const heart = document.querySelector('.heart');
         const envelope = document.querySelector('.envelope-wrapper');
-        envelope.addEventListener('click', () => {
+
+        heart.addEventListener('click', (e) => {
+            e.stopPropagation();
             envelope.classList.toggle('flap');
+            heart.classList.toggle('hidden');
         });
     </script>
 </body>

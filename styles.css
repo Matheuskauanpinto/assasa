@@ -1,6 +1,6 @@
 :root{
     --primary: #fff;
-    --bg-color: rgb(5, 53, 61);
+    --bg-color: #FFC0CB; /* rosa */
     --bg-envelope-color: #f5edd1;
     --envelope-tab: #ecdeb8;
     --envelope-cover: #e6cfa7;
@@ -30,6 +30,7 @@
     position: relative;
     width: 300px;
     height: 230px;
+    transition: all 0.5s ease-in-out;
   }
   .envelope-wrapper > .envelope::before {
     content: "";
@@ -100,7 +101,10 @@
   .heart:after {
     right: 7.5px;
   }
-  .flap > .envelope:before {
+  .hidden {
+    display: none;
+  }
+  .flap > .envelope::before {
     transform: rotateX(180deg);
     z-index: 0;
   }
@@ -110,6 +114,5 @@
     transition-delay: 1s;
   }
   .flap > .heart {
-    transform: rotate(90deg);
-    transition-delay: 0.4s;
-  }
+    tra
+  
